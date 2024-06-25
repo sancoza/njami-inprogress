@@ -390,3 +390,34 @@ document.getElementById('see-more-btn').addEventListener('click', () => {
 renderComments();
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('add-to-cart-form');
+  
+  form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      
+      const quantity = document.getElementById('quantity').value;
+      const product = {
+          id: 'dunkin-donut',
+          name: 'DUNKIN™ Crinkle Bag + Donut',
+          price: 15.00,
+          quantity: parseInt(quantity)
+      };
+      
+      addToCart(product);
+      alert('Product added to cart!');
+  });
+  
+  function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+      const existingProductIndex = cart.findIndex(item => item.id === product.id);
+      if (existingProductIndex !== -1) {
+          cart[existingProductIndex].quantity += product.quantity;
+      } else {
+          cart.push(product);
+      }
+      
+      localStorage.setItem('cart', JSON.stringify(cart));
+  }
+});
