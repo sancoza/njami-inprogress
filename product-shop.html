@@ -13,21 +13,22 @@
 
 <body>
     <header>
-        <nav class="d-flex">
-            <ul class="d-flex">
-                <li class="logo-container">
-                    <a class="logo" href="/index.php">
-                        <img src="./img/favicon-32x322.png" alt="" />
-                    </a>
-                </li>
-                <li><a href="jerky.html">Jerky</a></li>
-                <li><a href="bbq.html">BBQ</a></li>
-                <li><a href="salamy.html">Salamy</a></li>
-                <li><a href="snack.html">Snack</a></li>
-                <li><a href="#">Candy</a></li>
-                <li><a href="sparkly.html">Sparkly</a></li>
-            </ul>
-        </nav>
+        <section class="sidebar">
+            <nav class="category-nav">
+                <ul>
+                    <li class="logo-container">
+                        <a class="logo" href="/index.php">
+                            <img src="./img/favicon-32x322.png" alt="" />
+                        </a>
+                    </li>
+                    <li><a href="#" class="category-link" data-category="all">All</a></li>
+                    <li><a href="#" class="category-link" data-category="toys">Toys</a></li>
+                    <li><a href="#" class="category-link" data-category="silicon-mold">Silicon Mold</a></li>
+                    <li><a href="#" class="category-link" data-category="clothes">Clothes</a></li>
+                    <li><a href="#" class="category-link" data-category="accessories">Accessories</a></li>
+                </ul>
+            </nav>
+        </section>
         <section class="blog-nav">
             <div class="container d-flex">
                 <img class="blog-logo" src="./img/blog-logo.png" alt="blog-logo" />
@@ -55,17 +56,7 @@
         </section>
     </header>
     <main>
-        <section class="sidebar">
-            <nav class="category-nav">
-                <ul>
-                    <li><a href="#" class="category-link" data-category="all">All</a></li>
-                    <li><a href="#" class="category-link" data-category="toys">Toys</a></li>
-                    <li><a href="#" class="category-link" data-category="silicon-mold">Silicon Mold</a></li>
-                    <li><a href="#" class="category-link" data-category="clothes">Clothes</a></li>
-                    <li><a href="#" class="category-link" data-category="accessories">Accessories</a></li>
-                </ul>
-            </nav>
-        </section>
+     
         <section class="product-listing">
             <h1>Products</h1>
             <div id="product-grid" class="product-grid">
